@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-@media screen and (min-width: 768px) and (max-width:992px) {
+@media screen and (min-width: 768px) and (max-width: 992px) {
 /*Media para tablet - Aqui teremos o login se ajutando a tela, mudando de posição/formato*/
 
     body {

@@ -23,7 +23,6 @@ section#login {
     position: absolute; /*Para deixar a tela centralizada*/
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
     overflow: hidden; /*O que estiver fora da borda ficará escondido, para que daí apareça o border*/
 
     background-color: white;
@@ -32,6 +31,7 @@ section#login {
     border-radius: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.450); /*Sombra*/
 
+    transform: translate(-50%, -50%);
     transition: width .3s, height .3s; /*Serve para dar uma leve animação com a mudança de tamanho*/
     transition-timing-function: ease;
 }
@@ -60,15 +60,39 @@ div#formulario > p {
 
 form > div.campo {
     background-color: #5f2c82;
+    border: 2px solid #5f2c82;
     display: block;
     width: 100%;
     height: 40px;
-    border-radius: 5px;
+    border-radius: 8px;
     margin: 5px 0px; /*5 top e bottom, e o left e right*/
 }
 
 div.campo > label {
     display: none;
+}
+
+div.campo > span.material-icons {
+    color: white;
+    font-size: 2em;
+    width: 40px;
+    padding: 5px;
+}
+
+div.campo > input {
+    background-color: #94cfcd;
+    font-size: 1em;
+    width: calc(100% - 44px); /*O calc serve para o encaixe do input na div campo, ou de uma caixa dentro da outra*/
+    height: 100%;
+    float: right; /*Leva para a direita*/
+    border: 0px;
+    border-radius: 8px;
+    padding: 4px;
+    transform: translateY(0px); /*Junto com o calc serve para reposicionar a caixa - Qualquer animação colocar por último*/
+}
+
+div.campo > input:focus-within {
+    background-color: white;
 }
 
 form > input[type=submit] {
